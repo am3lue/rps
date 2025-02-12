@@ -1,3 +1,7 @@
+using FIGlet
+
+global ans = 1
+
 function game()
     global ans
     println("Please enter your choice:")
@@ -28,6 +32,11 @@ function game()
 end
 
 # Game loop
+    FIGlet.render("ROCK" ,"dancing Font")
+    FIGlet.render("PAPER", "3d")
+    FIGlet.render("SCISSORS", "ANSI Shadow")
+    println("\033[94m","\t\t\t\t\t\t\t\t\t\tmade by blue","\033[0m")
 while true
     game()
+    println("\n\n\n")
 end
