@@ -1,4 +1,5 @@
 using Gtk
+using Random
 
 # Initialize global variable for AI choice cycling
 global ans = 1
@@ -47,12 +48,14 @@ push!(vbox, hbox_buttons)
 result_label = GtkLabel("")
 push!(vbox, result_label)
 
+#Label for display 
+
 # Function to handle game logic
 function play_game(user_choice::Int)
     global ans
 
     # Cycle AI choice: 1 -> 2 -> 3 -> 1 ...
-    ans = (ans % 3) + 1
+    ans = rand(1,3)
 
     # Determine winner
     if ans == user_choice
